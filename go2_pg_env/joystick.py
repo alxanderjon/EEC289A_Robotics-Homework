@@ -575,3 +575,20 @@ class Joystick(go2_base.Go2Env):
         active_mask = jax.random.bernoulli(z_rng, cmd_keep_prob, shape=(3,))
         blend_mask = jax.random.bernoulli(w_rng, 0.5, shape=(3,))
         return current_command - blend_mask * (current_command - candidate * active_mask)
+        #return candidate * active_mask"""
+        #del current_command
+        #rng, y_rng, mode_rng = jax.random.split(rng, 3)
+
+        #cmd_min, cmd_max, _ = self._command_sampling_profile(jp.zeros(3))
+        #candidate = jax.random.uniform(y_rng, shape=(3,), minval=cmd_min, maxval=cmd_max)
+
+        #mode = jax.random.randint(mode_rng, shape=(), minval=0, maxval=4)
+
+        #masks = jp.array([
+        #    [1.0, 0.0, 0.0],  # vx only
+        #    [0.0, 1.0, 0.0],  # vy only
+        #    [0.0, 0.0, 1.0],  # yaw only
+        #    [1.0, 1.0, 1.0],  # combined
+        #])
+
+        #return candidate * masks[mode]
