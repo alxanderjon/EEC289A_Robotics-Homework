@@ -67,20 +67,20 @@
     "num_timesteps": 5000000,
     "command_range": {
       "min": [
-        -1.0,
-        -1.0,
-        -1.0
+        -0.6,
+        -0.2,
+        -0.6
       ],
       "max": [
-        1.0,
-        1.0,
-        1.0
+        0.6,
+        0.2,
+        0.6
       ]
     },
     "command_keep_prob": [
       1.0,
-      1.0,
-      1.0
+      0.35,
+      0.35
     ],
     "student_stage2_goal": {
       "command_range": {
@@ -102,10 +102,11 @@
       ]
     },
     "reward_scales": {
-      "tracking_lin_vel": 2.0,
-      "tracking_ang_vel": 2.0,
-      "action_rate": -0.001,
-      "energy": -0.0001,
+      "tracking_lin_vel": 2.5,
+      "tracking_ang_vel": 2.5,
+      "action_rate": -0.04,
+      "feet_slip": -0.06,
+      "energy": -0.005,
       "feet_air_time": 0.0
     },
     "restore_previous_stage_checkpoint": true
