@@ -67,20 +67,20 @@
     "num_timesteps": 5000000,
     "command_range": {
       "min": [
-        -0.0,
-        -0.0,
-        -0.0
+        -1.0,
+        -1.0,
+        -1.0
       ],
       "max": [
-        0.0,
         1.0,
-        0.0
+        1.0,
+        1.0
       ]
     },
     "command_keep_prob": [
-      0.0,
       1.0,
-      0.0
+      1.0,
+      1.0
     ],
     "student_stage2_goal": {
       "command_range": {
@@ -102,8 +102,8 @@
       ]
     },
     "reward_scales": {
-      "tracking_lin_vel": 4.0,
-      "tracking_ang_vel": 0.5,
+      "tracking_lin_vel": 2.0,
+      "tracking_ang_vel": 2.0,
       "action_rate": -0.001,
       "energy": -0.0001,
       "feet_air_time": 0.0
